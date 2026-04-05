@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
+
+<title>Rachna Weds Sumeet | Wedding Invitation</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cinzel:wght@400;600&family=Yatra+One&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+background:url("background.jpg");
+background-size:cover;
+background-position:center;
+font-family:Cinzel,serif;
+text-align:center;
+color:#7b0000;
+overflow-x:hidden;
+}
+
+/* LANDING COUPLE NAME */
+
+.couple{
+font-family:'Great Vibes',cursive;
+font-size:clamp(60px,8vw,90px);
+background:linear-gradient(45deg,#8b0000,#D4AF37);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.gold{color:#D4AF37;}
+.red{color:#8b0000;}
+
+/* LANDING */
+
+#cover{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+background:rgba(255,255,255,0.7);
+padding:20px;
+}
+
+.subtitle{
+letter-spacing:3px;
+margin-top:8px;
+}
+
+.tap{
+font-size:12px;
+margin-top:8px;
+opacity:0.8;
+}
+
+/* BUTTON */
+
+.open-btn{
+margin-top:20px;
+padding:18px 60px;
+border:none;
+border-radius:18px;
+background:#8b0000;
+color:white;
+cursor:pointer;
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:4px;
+}
+
+.btn-row{
+display:flex;
+align-items:center;
+gap:10px;
+font-size:20px;
+letter-spacing:2px;
+}
+
+.btn-main{
+color:white;
+font-weight:600;
+}
+
+.btn-hindi{
+font-family:'Yatra One',cursive;
+color:#D4AF37;
+font-size:18px;
+}
+
+/* DIVIDER */
+
+.divider{
+width:80px;
+height:1px;
+background:#D4AF37;
+margin:25px auto;
+}
+
+/* COUNTDOWN */
+
+.countdown{
+display:flex;
+justify-content:center;
+gap:12px;
+margin:20px 40px;
+}
+
+.time-box{
+background:#f3e5dc;
+padding:12px;
+border-radius:10px;
+width:65px;
+}
+
+.time-label{
+font-size:12px;
+margin-top:5px;
+}
+
+:root{
+color-scheme: light;
+}
+
+html{
+background-color:#ffffff;
+}
+
+img{
+filter:none !important;
+}
+
+/* INVITE PAGE */
+
+#invite{
+display:none;
+background:rgba(255,255,255,0.92);
+}
+
+/* SECTIONS */
+
+.section{
+padding:60px 20px;
+max-width:900px;
+margin:auto;
+opacity:0;
+transform:translateY(30px);
+transition:1.5s;
+}
+
+.events-section{
+padding:15px 20px;
+}
+
+.section.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* COUPLE TITLE */
+
+.wedding-names{
+font-family:'Great Vibes',cursive;
+font-size:clamp(60px,8vw,90px);
+background:linear-gradient(45deg,#8b0000,#D4AF37);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.wedding-names span{
+background:none;
+-webkit-text-fill-color:#8b0000;
+font-size:clamp(22px,3vw,30px);
+margin:0 10px;
+font-family:Cinzel;
+}
+
+/* HINDI */
+
+.hindi{
+font-family:'Yatra One',cursive;
+font-size:clamp(28px,4vw,34px);
+color:#8b0000;
+}
+
+/* PARENTS */
+
+.parent{
+color:#D4AF37;
+margin:4px 0;
+}
+
+/* AND */
+
+.and{
+margin:35px 0;
+font-style:italic;
+color:#D4AF37;
+font-size:20px;
+letter-spacing:3px;
+}
+
+/* PETALS */
+
+.petal{
+position:fixed;
+top:-20px;
+width:8px;
+height:12px;
+background:#ff8a8a;
+border-radius:50% 0;
+opacity:0.7;
+animation:fall linear infinite;
+}
+
+@keyframes fall{
+0%{transform:translateY(-20px) rotate(0deg)}
+100%{transform:translateY(110vh) rotate(360deg)}
+}
+
+/* SPARKLES */
+
+.sparkle{
+position:fixed;
+width:4px;
+height:4px;
+background:#D4AF37;
+border-radius:50%;
+opacity:0.8;
+animation:sparkle 3s linear infinite;
+}
+
+@keyframes sparkle{
+0%{transform:translateY(-20px);opacity:0}
+50%{opacity:1}
+100%{transform:translateY(100vh);opacity:0}
+}
+
+/* FINAL RED SECTION */
+
+.final-section{
+background:linear-gradient(135deg,#8b0000,#b21d16,#8b0000);
+color:white;
+padding:120px 20px;
+text-align:center;
+}
+
+.final-title{
+font-family:'Great Vibes',cursive;
+font-size:clamp(70px,8vw,100px);
+background:linear-gradient(45deg,#D4AF37,#fff3c0,#8b0000);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+margin:20px 0;
+}
+
+.final-hindi{
+font-family:'Yatra One',cursive;
+color:#f3d27a;
+font-size:28px;
+}
+
+.date-pill{
+display:inline-block;
+border:1px solid #D4AF37;
+padding:10px 28px;
+border-radius:30px;
+margin:25px 0;
+color:#D4AF37;
+letter-spacing:3px;
+}
+
+.venue-text{
+color:#f3d27a;
+font-size:14px;
+margin-top:8px;
+}
+
+.venue-btn{
+margin-top:25px;
+padding:12px 25px;
+border-radius:25px;
+border:1px solid #D4AF37;
+background:transparent;
+color:#D4AF37;
+cursor:pointer;
+}
+
+.venue-btn:hover{
+background:#D4AF37;
+color:#8b0000;
+}
+
+</style>
+</head>
+
+<body>
+
+<script>
+
+/* PETALS */
+
+for(let i=0;i<30;i++){
+let p=document.createElement("div")
+p.className="petal"
+p.style.left=Math.random()*100+"%"
+p.style.animationDuration=(6+Math.random()*8)+"s"
+document.body.appendChild(p)
+}
+
+/* SPARKLES */
+
+for(let i=0;i<40;i++){
+let s=document.createElement("div")
+s.className="sparkle"
+s.style.left=Math.random()*100+"%"
+s.style.animationDuration=(2+Math.random()*3)+"s"
+document.body.appendChild(s)
+}
+
+</script>
+
+<!-- LANDING PAGE -->
+
+<section id="cover">
+
+<div class="couple">Rachna & Sumeet</div>
+
+<div class="subtitle">Invite you to celebrate</div>
+
+<p>Your invitation awaits inside ✨</p>
+
+<button class="open-btn" onclick="openInvite()">
+
+<div class="btn-row">
+
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#D4AF37" viewBox="0 0 16 16">
+<path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2z"/>
+</svg>
+
+<span class="btn-main">OPEN INVITATION</span>
+
+</div>
+
+<div class="btn-hindi">निमंत्रण खोलें</div>
+
+</button>
+
+<div class="tap">Tap to reveal</div>
+
+<div class="divider"></div>
+
+<p>Counting down to the wedding</p>
+
+<div class="countdown">
+
+<div><div class="time-box"><div id="days">00</div></div><div class="time-label">Days</div></div>
+<div><div class="time-box"><div id="hours">00</div></div><div class="time-label">Hours</div></div>
+<div><div class="time-box"><div id="mins">00</div></div><div class="time-label">Mins</div></div>
+<div><div class="time-box"><div id="secs">00</div></div><div class="time-label">Secs</div></div>
+
+</div>
+
+</section>
+
+<!-- INVITE PAGE -->
+
+<section id="invite">
+
+<!-- existing invite sections remain unchanged -->
+
+
+
+<div class="section">
+
+<h3 class="gold">SHREE GANESHAYA NAMAH</h3>
+<h3 class="gold hindi">श्री गणेशाय नमः</h3>
+
+<img src="ganesh.png" style="width:clamp(200px,35vw,400px);margin:15px auto">
+
+<div class="wedding-names">
+Rachna <span>Weds</span> Sumeet
+</div>
+
+<p class="gold hindi">सस्नेह निमंत्रण</p>
+
+</div>
+
+<div class="section">
+
+<h4 style="color:#8b0000;">WITH THE DIVINE BLESSINGS OF</h4>
+
+<p class="parent">SMT. SANTOSH & SHRI SHAMBHU DAYAL MEENA</p>
+
+<p class="parent">SMT. CHANDA DEVI & LATE SHRI KAILASH CHAND MEENA</p>
+
+</div>
+
+<div class="section">
+
+<p style="font-style:italic;text-transform:uppercase">
+WE JOYFULLY INVITE YOU TO SHARE IN OUR HAPPINESS AS WE CELEBRATE THE WEDDING OF
+</p>
+
+</div>
+
+<div class="section">
+
+<div class="hindi">रचना</div>
+<div class="couple">Rachna</div>
+
+<p class="parent">सुपुत्री / Daughter of</p>
+
+<p class="parent">
+SMT. SANTOSH & SHRI SHAMBHU DAYAL MEENA
+</p>
+
+</div>
+
+<div class="and">AND</div>
+
+<div class="section">
+
+<div class="hindi">सुमीत</div>
+<div class="couple">Sumeet</div>
+
+<p class="parent">सुपुत्र / Son of</p>
+
+<p class="parent">
+SMT. CHANDA DEVI & LATE SHRI KAILASH CHAND MEENA
+</p>
+
+</div>
+
+<!-- GOLDEN MOMENTS / EVENTS SECTION -->
+
+<div class="section events-section">
+
+<!--<h3 class="gold hindi">|| श्री गणेशाय नमः ||</h3>-->
+
+<p class="red" style="max-width:600px;margin:auto">
+वक्रतुंड महाकाय सूर्यकोटि समप्रभः । <br>
+निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥
+</p>
+
+<br>
+
+<h2 class="red" style="font-family:'Great Vibes';font-size:65px">
+Events Scheduled
+</h2>
+
+</div>
+
+
+<div class="section events-section">
+
+<h3 class="gold">Thursday, 23rd April, 2026</h3>
+
+<p>Lagan .................................................. 8:15 a.m.</p>
+<p>Mehndi ............................................... 12:15 p.m.</p>
+<p>Tel ....................................................... 05:00 p.m.</p>
+
+</div>
+
+
+<div class="section events-section">
+
+<h3 class="gold">Friday, 24th April, 2026</h3>
+
+<p>Chaak ................................................. 10:00 a.m.</p>
+<p>Manda (Lunch) ......................... 12:00 p.m.</p>
+<p>Bhaat .................................................. 08:00 p.m.</p>
+
+</div>
+
+
+<div class="section events-section">
+
+<h3 class="gold">Saturday, 25th April, 2026</h3>
+
+<p>Welcome of Barat ................................ 7:15 p.m.</p>
+
+</div>
+
+
+<div class="section events-section">
+
+<h3 class="gold">Sunday, 26th April, 2026</h3>
+
+<p>Vidai .................................................... 7:00 a.m.</p>
+
+</div>
+
+
+
+<!-- VENUE -->
+
+<div class="section">
+
+<h3 class="gold">Venue</h3>
+
+<h2 style="font-family:'Great Vibes';font-size:42px;color:#8b0000">
+Sanjog Marriage Garden
+</h2>
+
+<p class="gold">
+Kati Ghati, Jaipur Road, Alwar, Rajasthan
+</p>
+
+<a href="https://maps.app.goo.gl/2f61ruQe2okv8tvq7" target="_blank" style="text-decoration:none;">
+<button class="venue-btn">
+📍 VIEW VENUE
+</button>
+</a>
+
+</div>
+
+
+
+
+<!-- FINAL RED CELEBRATION SECTION -->
+
+<section class="final-section">
+
+<div style="color:#D4AF37;font-size:40px">ॐ</div>
+
+<h3 style="font-family:'Great Vibes';font-size:30px">
+We can't wait to celebrate with you!
+</h3>
+
+<p class="final-hindi">
+आपकी उपस्थिति की प्रतीक्षा में
+</p>
+
+<div style="margin:20px;color:#D4AF37">♥</div>
+
+<div class="final-title">
+Rachna & Sumeet
+</div>
+
+<div class="final-hindi">
+रचना एवं सुमीत
+</div>
+
+<div class="date-pill">
+25th APRIL 2026
+</div>
+
+<div class="venue-text">
+Sanjog Marriage Garden<br>
+Kati Ghati, Jaipur Road, Alwar, Rajasthan
+</div>
+
+</section>
+
+<script>
+
+const weddingDate=new Date("April 25, 2026 20:00:00").getTime()
+
+setInterval(function(){
+
+const now=new Date().getTime()
+const distance=weddingDate-now
+
+document.getElementById("days").innerHTML=Math.floor(distance/(1000*60*60*24))
+document.getElementById("hours").innerHTML=Math.floor((distance%(1000*60*60*24))/(1000*60*60))
+document.getElementById("mins").innerHTML=Math.floor((distance%(1000*60*60))/(1000*60))
+document.getElementById("secs").innerHTML=Math.floor((distance%(1000*60))/1000)
+
+},1000)
+
+function openInvite(){
+
+document.getElementById("cover").style.display="none"
+document.getElementById("invite").style.display="block"
+
+document.querySelectorAll(".section").forEach(sec=>{
+sec.classList.add("show")
+})
+
+/* PLAY MUSIC */
+
+let music = document.getElementById("weddingMusic");
+music.play();
+
+}
+
+</script>
+
+<audio id="weddingMusic" loop>
+<source src="music.mp3" type="audio/mpeg">
+</audio>
+
+</body>
+</html>
